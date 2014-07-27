@@ -1,6 +1,6 @@
 NodeJsGettingStarted
 ====================
 
-npm install
-bower install
-tsd reinstall -s -o
+>  - npm install
+>  - bower install
+>  - tsd reinstall -s -o
