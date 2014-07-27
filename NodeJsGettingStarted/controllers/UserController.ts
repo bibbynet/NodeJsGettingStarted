@@ -73,7 +73,7 @@ module BF {
 
                 model.save((err: Error, mm?: userRepModule.IUser) => {
 
-                    req.redirect("/user/list", 301);
+                    req.redirect(301, "/user/list");
 
                 });
 
@@ -112,7 +112,7 @@ module BF {
 
                     model.save((err: Error, mm?: userRepModule.IUser) => {
 
-                        req.redirect("/user/list", 301);
+                        req.redirect(301, "/user/list");
 
                     });
                 });
@@ -129,7 +129,7 @@ module BF {
 
                     model.remove((err: Error) => {
 
-                        req.redirect("/user/list", 301);
+                        req.redirect(301, "/user/list");
 
                     });
 
