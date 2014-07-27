@@ -1,0 +1,23 @@
+﻿@html.extend('_LayoutWithHeader', function(model){
+@html.append('content', function(model){
+
+@{
+    var isRichStr=model.user.IsRich?'checked':'';
+}
+
+<h1>@model.title</h1>
+
+<form action="/user/delete/@model.user._id" method="post">
+    <input type="submit" value="Delete" />
+</form>
+
+<form action="/user/edit/@model.user._id" method="post">
+    Name:<input type="text" name="name" value="@model.user.Name" /> <br />
+    Age:<input type="text" name="age" value="@model.user.Age" /> <br />
+    Birthday:<input type="text" name="birthday" value="@model.birthdayStr" /> <br />
+    IsRich:<input type="checkbox" name="isRich" @isRichStr /> <br />
+    <input type="submit" value="Edit" />
+</form>
+
+})
+})

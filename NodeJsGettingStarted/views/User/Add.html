@@ -1,0 +1,16 @@
+﻿@html.extend('_LayoutWithHeader', function(model){
+@html.append('content', function(model){
+
+<h1>@model.title</h1>
+
+<form action="/user/add" method="post">
+    Name:<input type="text" name="name" /> <br />
+    Age:<input type="text" name="age" /> <br />
+    Birthday:<input type="text" name="birthday" /> <br />
+    IsRich:<input type="checkbox" name="isRich" /> <br />
+    <input type="submit" value="Add" />
+</form>
+
+
+})
+})

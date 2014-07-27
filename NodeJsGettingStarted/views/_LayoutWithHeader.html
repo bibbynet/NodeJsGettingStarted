@@ -1,0 +1,21 @@
+﻿@html.extend('_Layout', function(model){
+
+@html.block('content', function(model){
+
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/user/list">User List</a></li>
+</ul>
+<div>
+    @html.block('content')
+</div>
+
+})
+
+@html.block('script', function(model){
+
+    @html.block('script')
+
+})
+
+})

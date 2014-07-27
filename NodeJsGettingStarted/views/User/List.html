@@ -1,0 +1,18 @@
+﻿@html.extend('_LayoutWithHeader', function(model){
+@html.append('content', function(model){
+
+<h1>@model.title</h1>
+
+<a href="/user/add">Add</a>
+<ul>
+    @model.users.forEach(function(a){
+    <li>
+        <a href="/user/edit/@a._id">Edit</a> @a.Name - @a.Age - @a.Birthday - @a.IsRich
+    </li>
+    })
+</ul>
+
+
+
+})
+})
